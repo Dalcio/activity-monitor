@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/css/all.css";
 import { Switch, Route } from "react-router-dom";
 import {
   Sidebar,
@@ -24,7 +23,7 @@ function App() {
   return (
     <React.Fragment>
       <Sidebar setPW={setPW} />
-      <PageContent width={pW} class="" id="page-content">
+      <PageContent width={pW} id="page-content">
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/optimize" component={Optimize} />
@@ -43,13 +42,27 @@ function App() {
 }
 
 const PageContent = styled.div`
-  width: 70%;
+  width: calc(100% - 256px);
   background-color: #1e1e20;
   float: left;
   height: 100vh;
+  @media screen and (max-width: 853px) {
+    width: 70%;
+  }
   @media screen and (max-width: 760px) {
     width: ${({ width }) => width};
     transition: all 0.5s ease-in-out;
+  }
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    max-width: 0.625rem !important;
+  }
+  &::-webkit-scrollbar-track {
+    background: #2a2a2b !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #7d7d7e !important;
   }
 `;
 export default App;

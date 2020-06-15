@@ -1,19 +1,5 @@
 import styled from "styled-components";
 
-export const Toggle = styled.button`
-  background: transparent;
-  width: 50px;
-  height: 40px;
-  border: none;
-  display: none;
-  @media screen and (max-width: 760px) {
-    display: block !important;
-  }
-  &:hover {
-    background-color: #5c6578;
-  }
-`;
-
 export const Navside = styled.div`
   width: 30%;
   max-width: 256px;
@@ -24,6 +10,22 @@ export const Navside = styled.div`
   @media screen and (max-width: 760px) {
     width: ${({ width }) => width};
     transition: all 0.5s ease-in-out;
+  }
+`;
+
+export const Toggle = styled.button`
+  background: transparent;
+  width: 50px;
+  height: 40px;
+  border: none;
+  display: none;
+  font-size: 20px;
+  color: #d7d9dc;
+  @media screen and (max-width: 760px) {
+    display: block !important;
+  }
+  &:hover {
+    background-color: #5c6578;
   }
 `;
 
@@ -61,6 +63,10 @@ export const NavItem = styled.li`
   &:hover {
     background-color: #5c6578;
   }
+  #ico {
+    font-size: 20px;
+    margin: -5px 10px 0 0;
+  }
 `;
 
 export const NavHeader = styled.li`
@@ -85,5 +91,10 @@ export const NavFooter = styled.li`
   color: #f5f5f5;
   &:hover {
     background-color: #5c6578;
+  }
+
+  #ico {
+    font-size: 20px;
+    margin: -5px 10px 0 0;
   }
 `;
