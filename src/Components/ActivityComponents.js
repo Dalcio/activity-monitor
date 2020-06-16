@@ -4,10 +4,10 @@ import Optimize from "./Utilities/Optimize";
 import Uninstaller from "./Utilities/Uninstaller";
 import Clean from "./Utilities/Clean";
 import Trim from "./Utilities/Trim";
-import Storage from "./Hardware/Storage";
+import Storage from "./Hardware/Storage/Storage";
 import Graphics from "./Hardware/Graphics";
 import Battery from "./Hardware/Battery";
-import Cooling from "./Hardware/Cooling";
+import Cooling from "./Hardware/Cooling/Cooling";
 import Settings from "./Settings";
 
 export {

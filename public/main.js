@@ -12,7 +12,8 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 900,
     height: 680,
-    minWidth: 470,
+    minWidth: 600,
+    minHeight: 390,
     webPreferences: {
       nodeIntegration: true,
       devTools: true,
@@ -23,6 +24,7 @@ function createWindow() {
       ? "http://localhost:3000"
       : `file://${path.join(__dirname, "../build/index.html")}`
   );
+  mainWindow.webContents.openDevTools();
   mainWindow.on("closed", () => (mainWindow = null));
 }
 

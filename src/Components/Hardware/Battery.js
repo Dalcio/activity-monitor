@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Table, TableGroup, TableLinha } from "./HardwareComponents";
 import { TiThermometer, TiHeartFullOutline } from "react-icons/ti";
 import Batery from "../Assets/battery.png";
-import Helth from "./Health";
+import Health from "./Health";
 import styled from "styled-components";
 import { ProgressBar } from "react-bootstrap";
 
@@ -27,12 +27,15 @@ class Battery extends Component {
               <h4>BQ40Z651</h4>
               <p>Li-Polyner MacBook Pro (16-inch, 2019) Battery</p>
               <h6>DSY</h6>
-
               <ProgressBar
                 variant="success"
                 now={18}
                 label={`${18}%`}
-                style={{ height: "30px", marginTop: "30px", backgroundColor: '#474E47' }}
+                style={{
+                  height: "30px",
+                  marginTop: "30px",
+                  backgroundColor: "#474E47",
+                }}
               />
             </div>
           </Header>
@@ -43,7 +46,7 @@ class Battery extends Component {
             <h4>Health</h4>
           </div>
           <div className="col-12 ">
-            <Helth
+            <Health
               status={98}
               unit={"%"}
               ico={<TiHeartFullOutline />}
@@ -52,7 +55,7 @@ class Battery extends Component {
                 "This battery is in good condition but is starting to lose some capacity."
               }
             />
-            <Helth
+            <Health
               status={32}
               unit={"°C"}
               ico={<TiThermometer />}

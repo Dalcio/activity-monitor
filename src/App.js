@@ -20,16 +20,17 @@ import styled from "styled-components";
 
 function App() {
   const [pW, setPW] = useState("calc(100% - 50px)");
+  const [Bg, setBg] = useState(null);
   return (
     <React.Fragment>
       <Sidebar setPW={setPW} />
-      <PageContent width={pW} id="page-content">
+      <PageContent width={pW} id="page-content" bg={Bg}>
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/optimize" component={Optimize} />
           <Route path="/uninstaller" component={Uninstaller} />
           <Route path="/clean" component={Clean} />
-          <Route path="/trim" component={Trim} />
+          <Route path="/trim" component={Trim} Bg={setBg} />
           <Route path="/storage" component={Storage} />
           <Route path="/graphics" component={Graphics} />
           <Route path="/battery" component={Battery} />
@@ -46,6 +47,7 @@ const PageContent = styled.div`
   background-color: #1e1e20;
   float: left;
   height: 100vh;
+  background-image: URL(${({ bg }) => bg});
   @media screen and (max-width: 853px) {
     width: 70%;
   }

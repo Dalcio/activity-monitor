@@ -17,10 +17,10 @@ import {
   BsTrash2Fill,
 } from "react-icons/bs";
 import { FaAppStoreIos, FaBuromobelexperte } from "react-icons/fa";
-import { GrCloudlinux } from "react-icons/gr";
 import { IoIosSpeedometer } from "react-icons/io";
 import { MdStorage } from "react-icons/md";
 import { FiCpu } from "react-icons/fi";
+import { GiBoatPropeller } from "react-icons/gi";
 
 function Sidebar({ setPW }) {
   const [navW, setNavW] = useState("50px");
@@ -98,7 +98,7 @@ function Sidebar({ setPW }) {
         </Link>
         <Link to="/cooling">
           <NavItem>
-            <GrCloudlinux id="ico" />
+            <GiBoatPropeller id="ico" />
             Cooling
           </NavItem>
         </Link>
