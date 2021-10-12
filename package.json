@@ -50,7 +50,7 @@
   "main": "public/main.js",
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "electron": "^8.2.5",
+    "electron": "^11.5.0",
     "wait-on": "^4.0.2"
   }
 }
